@@ -17,7 +17,15 @@ Signup:
 
 Homepage:
 
-Match:
+Recommendations:
+
+Matches:
+
+Reward System:
+
+Solidity:
+
+
 
 
 Prerequisites:<br />
