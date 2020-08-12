@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Transaction</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12 text-center" >
+          <h1 >Transaction</h1>
+          <hr/>
+          <br/>
+          <div id="content">
+            <h4 id="candidateName"></h4>
+            <hr/>
+            <form role="form">
+              <div class="form-group" style="display:inline;">
+                <div class="input-group">
+                  <input class="form-control input-lg" id="account" placeholder="Recipient Account">
+                  </input>
+                  <input class="form-control input-lg" id="amount" placeholder="Amount">
+                  </input>
+                  <span class="input-group-btn">
+                    <button type="submit" class="btn btn-primary btn-lg">Send Amount</button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script>
+      // Initialize Web3
+      if (typeof web3 !== 'undefined') {
+        web3 = new Web3(web3.currentProvider);
+      } else {
+        web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
+      }
+
+      // Set Account
+      web3.eth.defaultAccount = web3.eth.accounts[0];
+
+      // Set Contract Abi
+      var contractAbi = [
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "acceptOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"name": "tokens",
+				"type": "uint256"
+			}
+		],
+		"name": "approve",
+		"outputs": [
+			{
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"name": "tokens",
+				"type": "uint256"
+			},
+			{
+				"name": "data",
+				"type": "bytes"
+			}
+		],
+		"name": "approveAndCall",
+		"outputs": [
+			{
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"name": "tokens",
+				"type": "uint256"
+			}
+		],
+		"name": "transfer",
+		"outputs": [
+			{
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "tokenAddress",
+				"type": "address"
+			},
+			{
+				"name": "tokens",
+				"type": "uint256"
+			}
+		],
+		"name": "transferAnyERC20Token",
+		"outputs": [
+			{
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"name": "tokens",
+				"type": "uint256"
+			}
+		],
+		"name": "transferFrom",
+		"outputs": [
+			{
+				"name": "success",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "_from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "_to",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "tokens",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "tokenOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "spender",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "tokens",
+				"type": "uint256"
+			}
+		],
+		"name": "Approval",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "_totalSupply",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "tokenOwner",
+				"type": "address"
+			},
+			{
+				"name": "spender",
+				"type": "address"
+			}
+		],
+		"name": "allowance",
+		"outputs": [
+			{
+				"name": "remaining",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "tokenOwner",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"name": "balance",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "decimals",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "newOwner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "a",
+				"type": "uint256"
+			},
+			{
+				"name": "b",
+				"type": "uint256"
+			}
+		],
+		"name": "safeAdd",
+		"outputs": [
+			{
+				"name": "c",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "a",
+				"type": "uint256"
+			},
+			{
+				"name": "b",
+				"type": "uint256"
+			}
+		],
+		"name": "safeDiv",
+		"outputs": [
+			{
+				"name": "c",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "a",
+				"type": "uint256"
+			},
+			{
+				"name": "b",
+				"type": "uint256"
+			}
+		],
+		"name": "safeMul",
+		"outputs": [
+			{
+				"name": "c",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "a",
+				"type": "uint256"
+			},
+			{
+				"name": "b",
+				"type": "uint256"
+			}
+		],
+		"name": "safeSub",
+		"outputs": [
+			{
+				"name": "c",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "symbol",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]; // Add Your Contract ABI here!!!
+
+
+      // Set Contract Address
+      var contractAddress = '0x4115523EA0De03B70b0921528eAF1615AB18d48b'; // Add Your Contract address here!!!
+
+      // Set the Contract
+      var contract = web3.eth.contract(contractAbi).at(contractAddress);
+
+      // Display Candidate Name
+      //contract.nombreDeCandidato(function(err, candidateName) {
+      //  $('#candidateName').html(candidateName);
+      //});
+
+      // Change the Candidate Name
+      $('form').on('submit', function(event) {
+        event.preventDefault();
+        contract.transfer($('#account').val(), $('#amount').val());
+        alert("Transaction Successful");
+        //contract.setCandidato($('input').val());
+      })
+
+    </script>
+  </body>
+</html>
