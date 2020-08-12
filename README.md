@@ -16,7 +16,7 @@ This application with built with React.js, Solidity, MongoDB. It is supported by
 <p align="center"><i>Getting Started:</i>
   <p>
 <p align="center">
-  <img width="600" height="400" src="https://imgur.com/OXXcx9W.png">
+  <img width="600" height="400" src="https://imgur.com/vbGBjTP.png">
 </p>
 
 <p align="center"><i>Login:</i>
@@ -37,16 +37,10 @@ This application with built with React.js, Solidity, MongoDB. It is supported by
   <img width="600" height="400" src="https://imgur.com/J2DAZ4u.png">
 </p>
 
-<p align="center"><i>Recommendations:</i>
-  <p>
-<p align="center">
-  <img width="600" height="400" src="https://imgur.com/2xGmwBR.png">
-</p>
-
 <p align="center"><i>Matches:</i>
   <p>
 <p align="center">
-  <img width="600" height="400" src="https://imgur.com/0bop17z.png">
+  <img width="600" height="400" src="https://imgur.com/8pQ2iB9.png">
 </p>
 
 <p align="center"><i>Chat:</i>
