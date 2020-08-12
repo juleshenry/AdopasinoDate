@@ -40,13 +40,13 @@ This application with built with React.js, Solidity, MongoDB. It is supported by
 <p align="center"><i>Recommendations:</i>
   <p>
 <p align="center">
-  <img width="600" height="400" src="https://imgur.com/2xGmwBR.png">
+  <img width="600" height="40%" src="https://imgur.com/2xGmwBR.png">
 </p>
 
 <p align="center"><i>Matches:</i>
   <p>
 <p align="center">
-  <img width="600" height="400" src="https://imgur.com/0bop17z.png">
+  <img width="600" height="40%" src="https://imgur.com/0bop17z.png">
 </p>
 
 <p align="center"><i>Chat:</i>
