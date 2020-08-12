@@ -66,6 +66,8 @@ This application with built with React.js, Solidity, MongoDB. It is supported by
 **Prerequisites:**<br />
 1. install node: https://nodejs.org/en/download/ <br/>
 2. install yarn package manager: https://classic.yarnpkg.com/en/docs/install/ <br/>
+3. install mongodb: https://docs.mongodb.com/manual/installation/
+4. install truffle: https://www.trufflesuite.com/docs/truffle/getting-started/installation
 
 **To get the project up and running:**<br/>
 1. yarn install <br/>
