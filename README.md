@@ -61,8 +61,9 @@ This application with built with React.js, Solidity, MongoDB. It is supported by
 Reward System:<br/>
 
 
+
 Solidity:<br/>
-Solidity is the most popular programming languages for implementing smart contracts in the Ethereum blockchain. In this app, Solidity contracts are used to create the app's own cryptocurrency, the Kissmet, as well as to maintain a parallel, cryptographically-safe database matching users to theri respective account balances.
+  Solidity is the most popular programming languages for implementing smart contracts in the Ethereum blockchain. In this app, Solidity contracts are used to create the app's own cryptocurrency, the Kissmet, as well as to maintain a parallel, cryptographically-safe database matching users to theri respective account balances.
 
 
 
