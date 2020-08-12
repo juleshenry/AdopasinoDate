@@ -14,6 +14,7 @@
 Prerequisites:<br />
 1. install node: https://nodejs.org/en/download/ <br/>
 2. install yarn package manager: https://classic.yarnpkg.com/en/docs/install/ <br/>
+
 To get the project up and running:<br/>
 1. yarn install <br/>
 2. yarn start <br/>
