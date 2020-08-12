@@ -58,12 +58,13 @@ This application with built with React.js, Solidity, MongoDB. It is supported by
 
 
 
-Reward System:<br/>
+Coin System:<br/>
+&ensp;&ensp;&ensp;&ensp;Each user starts out with 3 Kissmets. At midnight, users with less than 3 Kissmets have their balances reset to 3. Liking someone costs 1 Kissmet, which gets added to the target person's "pot". Once a match occurs, the two matching users have their "pots" joined, and the three users to have last liked either of the two matching users each receive 10% of this total. The remaining Kissmets go to the two matching users, half to each.
 
 
 
 Solidity:<br/>
-&ensp;&ensp;Solidity is the most popular programming languages for implementing smart contracts in the Ethereum blockchain. In this app, Solidity contracts are used to create the app's own cryptocurrency, the Kissmet, as well as to maintain a parallel, cryptographically-safe database matching users to theri respective account balances.
+&ensp;&ensp;&ensp;&ensp;Solidity is the most popular programming languages for implementing smart contracts in the Ethereum blockchain. In this app, Solidity contracts are used to create the app's own cryptocurrency, the Kissmet, as well as to maintain a parallel, cryptographically-safe database matching users to theri respective account balances.
 
 
 ---
