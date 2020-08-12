@@ -13,7 +13,7 @@
 
 This application with built with React.js, Solidity, MongoDB. It is supported by many javascript libraries: webpack, babel, react-hook-forms, json-web-token, and passport (among many others!).
 
-<p align="center"><it>Getting Started:</it>
+<p align="center"><i>Getting Started:</i>
   <p>
 <p align="center">
   <img width="460" height="300" src="https://imgur.com/OXXcx9W.png">
