@@ -58,7 +58,7 @@ Coin System:<br/>
 
 
 Solidity:<br/>
-&ensp;&ensp;&ensp;&ensp;Solidity is the most popular programming languages for implementing smart contracts in the Ethereum blockchain. In this app, Solidity contracts are used to create the app's own cryptocurrency, the Kissmet, as well as to maintain a parallel, cryptographically-safe database matching users to theri respective account balances.
+&ensp;&ensp;&ensp;&ensp;Solidity is the most popular programming languages for implementing smart contracts in the Ethereum blockchain. In this app, Solidity contracts are used to create the app's own cryptocurrency, the Kissmet, as well as to maintain a parallel, cryptographically-safe database matching users to their respective account balances.
 
 
 ---
