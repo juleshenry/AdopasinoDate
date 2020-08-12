@@ -52,7 +52,7 @@ This application with built with React.js, Solidity, MongoDB. It is supported by
 
 
 
-Coin System:<br/>
+*Coin System:*<br/>
 &ensp;&ensp;&ensp;&ensp;Each user starts out with 3 Kissmets. At midnight, users with less than 3 Kissmets have their balances reset to 3. Liking someone costs 1 Kissmet, which gets added to the target person's "pot". Once a match occurs, the two matching users have their "pots" joined, and the three non-matching users to have last liked either of the two matching users each receive 10% of this total. The remaining Kissmets in the combined pots go to the two matching users, half to each.
 
 
