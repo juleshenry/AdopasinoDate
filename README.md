@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="460" height="300" src="https://imgur.com/k2ZtRO1.png">
+  <img width="460" height="300" src="https://images.app.goo.gl/gLshB1dT8wudgHZg7">
 </p>
 
 <h2 align="center">Adopasino: Bodacious Crypto Dating</h2>
