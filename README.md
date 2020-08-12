@@ -11,6 +11,9 @@
     <img alt="Chat on Gitter" src="https://img.shields.io/gitter/room/jlongster/prettier.svg?style=flat-square"></a>
 <p>
 
+This application with built with React.js, Solidity, MongoDB. It is supported by many javascript libraries: webpack, babel, react-hook-forms, json-web-token, and passport (among many others!).
+
+
 Login:
 
 Signup:
