@@ -52,22 +52,22 @@ This application with built with React.js, Solidity, MongoDB. It is supported by
 
 
 
-*Coin System:*<br/>
+**Coin System:**<br/>
 &ensp;&ensp;&ensp;&ensp;Each user starts out with 3 Kissmets. At midnight, users with less than 3 Kissmets have their balances reset to 3. Liking someone costs 1 Kissmet, which gets added to the target person's "pot". Once a match occurs, the two matching users have their "pots" joined, and the three non-matching users to have last liked either of the two matching users each receive 10% of this total. The remaining Kissmets in the combined pots go to the two matching users, half to each.
 
 
 
-Solidity:<br/>
+**Solidity:**<br/>
 &ensp;&ensp;&ensp;&ensp;Solidity is the most popular programming languages for implementing smart contracts in the Ethereum blockchain. In this app, Solidity contracts are used to create the app's own cryptocurrency, the Kissmet, as well as to maintain a parallel, cryptographically-safe database matching users to their respective account balances.
 
 
 ---
 
-Prerequisites:<br />
+**Prerequisites:**<br />
 1. install node: https://nodejs.org/en/download/ <br/>
 2. install yarn package manager: https://classic.yarnpkg.com/en/docs/install/ <br/>
 
-To get the project up and running:<br/>
+**To get the project up and running:**<br/>
 1. yarn install <br/>
 2. yarn start <br/>
 3. Find the app at: http://localhost:8000/<br/>
