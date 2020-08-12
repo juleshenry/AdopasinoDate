@@ -1,2 +1,4 @@
 .env
-.DS_store
+.DS_Store
+*.DS_Store
+node_modules
