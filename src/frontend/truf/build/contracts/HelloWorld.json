@@ -1,0 +1,331 @@
+{
+  "contractName": "HelloWorld",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "sayHello",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"sayHello\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/hpower/Desktop/projs/AmorealTest/Amoreal/src/frontend/truf/contracts/HelloWorld.sol\":\"HelloWorld\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/hpower/Desktop/projs/AmorealTest/Amoreal/src/frontend/truf/contracts/HelloWorld.sol\":{\"keccak256\":\"0x285e2dfec90c44f102770546c42cd75057f78dd911b5c79fdba33bbaeddadfc5\",\"urls\":[\"bzz-raw://36829a3c4fb21d9fc4e6f066db870721662e9fdc8c80da5903448a86bb419bb6\",\"dweb:/ipfs/QmcyMhx8JAV4W4G1X8CDpzgCNJME5AyuFixW1sWYLkPKt2\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061011d806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063ef5fb05b14602d575b600080fd5b603360ab565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101560715780820151818401526020810190506058565b50505050905090810190601f168015609d5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60606040518060400160405280600b81526020017f68656c6c6f20776f726c6400000000000000000000000000000000000000000081525090509056fea265627a7a723158209abba12efaa22bfcf84da57c0f207643a944981260c22808c9c066b8eff3b4bf64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063ef5fb05b14602d575b600080fd5b603360ab565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101560715780820151818401526020810190506058565b50505050905090810190601f168015609d5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60606040518060400160405280600b81526020017f68656c6c6f20776f726c6400000000000000000000000000000000000000000081525090509056fea265627a7a723158209abba12efaa22bfcf84da57c0f207643a944981260c22808c9c066b8eff3b4bf64736f6c63430005100032",
+  "sourceMap": "25:120:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:120:2;;;;;;;",
+  "deployedSourceMap": "25:120:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:120:2;;;;;;;;;;;;;;;;;;;51:92;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;51:92:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;91:13;115:21;;;;;;;;;;;;;;;;;;;51:92;:::o",
+  "source": "pragma solidity ^0.5.16;\ncontract HelloWorld {\n    function sayHello() public view returns(string memory){\n        return(\"hello world\");\n    }\n}\n",
+  "sourcePath": "/Users/hpower/Desktop/projs/AmorealTest/Amoreal/src/frontend/truf/contracts/HelloWorld.sol",
+  "ast": {
+    "absolutePath": "/Users/hpower/Desktop/projs/AmorealTest/Amoreal/src/frontend/truf/contracts/HelloWorld.sol",
+    "exportedSymbols": {
+      "HelloWorld": [
+        958
+      ]
+    },
+    "id": 959,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 948,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 958,
+        "linearizedBaseContracts": [
+          958
+        ],
+        "name": "HelloWorld",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 956,
+              "nodeType": "Block",
+              "src": "105:38:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "68656c6c6f20776f726c64",
+                        "id": 953,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "122:13:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad",
+                          "typeString": "literal_string \"hello world\""
+                        },
+                        "value": "hello world"
+                      }
+                    ],
+                    "id": 954,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "121:15:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad",
+                      "typeString": "literal_string \"hello world\""
+                    }
+                  },
+                  "functionReturnParameters": 952,
+                  "id": 955,
+                  "nodeType": "Return",
+                  "src": "115:21:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 957,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sayHello",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 949,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "68:2:2"
+            },
+            "returnParameters": {
+              "id": 952,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 951,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 957,
+                  "src": "91:13:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 950,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "91:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "90:15:2"
+            },
+            "scope": 958,
+            "src": "51:92:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 959,
+        "src": "25:120:2"
+      }
+    ],
+    "src": "0:146:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/hpower/Desktop/projs/AmorealTest/Amoreal/src/frontend/truf/contracts/HelloWorld.sol",
+    "exportedSymbols": {
+      "HelloWorld": [
+        958
+      ]
+    },
+    "id": 959,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 948,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 958,
+        "linearizedBaseContracts": [
+          958
+        ],
+        "name": "HelloWorld",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 956,
+              "nodeType": "Block",
+              "src": "105:38:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "68656c6c6f20776f726c64",
+                        "id": 953,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "122:13:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad",
+                          "typeString": "literal_string \"hello world\""
+                        },
+                        "value": "hello world"
+                      }
+                    ],
+                    "id": 954,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "121:15:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad",
+                      "typeString": "literal_string \"hello world\""
+                    }
+                  },
+                  "functionReturnParameters": 952,
+                  "id": 955,
+                  "nodeType": "Return",
+                  "src": "115:21:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 957,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sayHello",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 949,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "68:2:2"
+            },
+            "returnParameters": {
+              "id": 952,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 951,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 957,
+                  "src": "91:13:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 950,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "91:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "90:15:2"
+            },
+            "scope": 958,
+            "src": "51:92:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 959,
+        "src": "25:120:2"
+      }
+    ],
+    "src": "0:146:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x7Dd48f6b29caB981cA34B0661F3Fb28384D897B8",
+      "transactionHash": "0x8da283c1986b866c3f0f8478df436491a69ff568492d016a558f8f8248cf72b9"
+    }
+  },
+  "schemaVersion": "3.2.3",
+  "updatedAt": "2020-08-01T11:27:27.116Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
