@@ -19,17 +19,44 @@ This application with built with React.js, Solidity, MongoDB. It is supported by
   <img width="600" height="400" src="https://imgur.com/OXXcx9W.png">
 </p>
 
+<p align="center"><i>Login:</i>
+  <p>
+<p align="center">
+  <img width="600" height="400" src="https://imgur.com/FLYT097.png">
+</p>
 
-Login:
+<p align="center"><i>Signup:</i>
+  <p>
+<p align="center">
+  <img width="600" height="500" src="https://imgur.com/E5gzsYl.png">
+</p>
+
+<p align="center"><i>Homepage:</i>
+  <p>
+<p align="center">
+  <img width="600" height="400" src="https://imgur.com/J2DAZ4u.png">
+</p>
+
+<p align="center"><i>Recommendations:</i>
+  <p>
+<p align="center">
+  <img width="600" height="400" src="https://imgur.com/2xGmwBR.png">
+</p>
+
+<p align="center"><i>Matches:</i>
+  <p>
+<p align="center">
+  <img width="600" height="400" src="https://imgur.com/0bop17z.png">
+</p>
+
+<p align="center"><i>Chat:</i>
+  <p>
+<p align="center">
+  <img width="600" height="400" src="https://imgur.com/sMOnlwN.png">
+</p>
 
 
-Signup:
 
-Homepage:
-
-Recommendations:
-
-Matches:
 
 Reward System:
 
